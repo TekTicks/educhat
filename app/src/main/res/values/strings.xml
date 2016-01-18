@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">EduChat</string>
+    <string name="action_settings">Settings</string>
+
+    <!--ShareStausActivity strings-->
+    <string name="action_status">Status</string>
+    <string name="Share_your_status">Share your status</string>
+    <string name="share_plans">Share plans, ideas, or your mood</string>
+    <string name="status_visibility">Your status is visible to your contacts</string>
+    <string name="share_plans_edit_text_hint"><font size="15">Share plans, ideas, or your mood</font></string>
+
+
+    <string name="verify_your_phone">Verify your number</string>
+    <string name="misscall_to_verify">Missed call to verify</string>
+    <string name="verification_status">Verification Status:</string>
+
+
+    <string name="login_username_hint">Username</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_button_text">Log In</string>
+    <string name="Welcome_string_on_Login">Welcome to EduChat</string>
+    <string name="Register_button">Register</string>
+    <string name="No_account">Don\'t have account?</string>
+    <string name="sign_up">Sign Up now!</string>
+    <string name="parent_logo_text">PARENT</string>
+    <string name="teacher_logo_text">TEACHER</string>
+    <string name="student_logo_text">STUDENT</string>
+    <string name="name_hint">Name</string>
+    <string name="number_hint">Mobile Number</string>
+    <string name="sign_up_button">Sign Up</string>
+</resources>
