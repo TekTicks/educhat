@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0C6350</color>
+    <color name="colorPrimaryDark">#042e2a</color>
+    <color name="colorAccent">#084F3D</color>
+    <color name="colorNavBackground">#FFFFFF</color>
+    <color name="colorShareStatusActivityBackground">#eaebeb</color>
+    <color name="colorVerifyPhone">#049372</color>
+    <color name="buttonColor">#049372</color>
+    <color name="buttonColorRegistrationPage">#145444</color>
+    <color name="buttonTextColor">#ffffff</color>
+    <color name="frame_layout_top_registration_page">#0C6350</color>
+    <color name="frame_layout_bottom_registration_page">#084f3d</color>
+    <color name="separator_login_page">#000000</color>
+</resources>

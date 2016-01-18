@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="4"
+    tools:context=".activity.WelcomeScreenActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/frame_layout_top_registration_page"
+        android:layout_weight="1"></FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:background="@color/frame_layout_bottom_registration_page">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_button_text"
+            android:id="@+id/button1"
+            android:layout_margin="5dp"
+            android:textColor="@color/buttonTextColor"
+            android:background="@color/buttonColorRegistrationPage"
+            android:textAlignment="center"
+            android:textAllCaps="false" />
+
+            <Button
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="@string/Register_button"
+             android:layout_below="@id/button1"
+             android:background="@color/buttonColorRegistrationPage"
+             android:textColor="@color/buttonTextColor"
+             android:layout_margin="5dp"
+             android:id="@+id/button2"
+                android:textAlignment="center"
+             android:textAllCaps="false"
+                />
+
+        </RelativeLayout>
+
+
+
+    </FrameLayout>
+</LinearLayout>

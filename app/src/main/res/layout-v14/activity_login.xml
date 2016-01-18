@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    tools:context=".activity.LoginActivity">
+
+    <TextView
+        android:id="@+id/TextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/Welcome_string_on_Login"
+        android:textAllCaps="false"
+        android:textSize="25dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TextTitle"
+        android:paddingTop="50dp"
+        android:theme="@style/editTextHighlightTheme">
+
+        <EditText
+            android:id="@+id/EditUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_username_hint"
+            android:paddingTop="10dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_layout_username"
+        android:paddingBottom="20dp"
+        android:theme="@style/editTextHighlightTheme">
+
+        <EditText
+            android:id="@+id/EditPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EditUsername"
+            android:hint="@string/login_password_hint" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/ButtonLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_layout_password"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/buttonColor"
+        android:text="@string/login_button_text"
+        android:textAllCaps="false" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="80dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ButtonLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/separator_login_page" />
+
+    <TableLayout
+        android:id="@+id/TableLayoutForSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/TextNoAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="@string/No_account"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/signUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:text="@string/sign_up"
+                android:textColor="@color/buttonColor"
+                android:textSize="10dp" />
+        </TableRow>
+
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TableLayoutForSignUp"
+        android:layout_centerHorizontal="true">
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/parentLogo"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_below="@id/TableLayoutForSignUp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/parent_logo" />
+
+            <ImageView
+                android:id="@+id/teacherLogo"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_below="@id/TableLayoutForSignUp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="50dp"
+                android:layout_toRightOf="@+id/parentLogo"
+                android:src="@drawable/teacher_logo" />
+
+            <ImageView
+                android:id="@+id/studentLogo"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_below="@+id/TableLayoutForSignUp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="50dp"
+                android:layout_toRightOf="@+id/teacherLogo"
+                android:src="@drawable/student_logo" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/TextParent"
+                android:paddingTop="10dp"
+                android:text="@string/parent_logo_text"
+                android:textAlignment="center"
+                android:textColor="@color/separator_login_page" />
+
+            <TextView
+                android:id="@+id/TextTeacher"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:text="@string/teacher_logo_text"
+                android:textAlignment="center"
+                android:textColor="@color/separator_login_page" />
+
+            <TextView
+                android:id="@+id/TextStudent"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:text="@string/student_logo_text"
+                android:textAlignment="center"
+                android:textColor="@color/separator_login_page" />
+
+
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="26dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorVerifyPhone"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="14dp"
+            android:text="@string/verify_your_phone"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="40dp">
+
+        <TextView
+            android:id="@+id/misscallToVerify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/misscall_to_verify"
+            android:textColor="@color/colorVerifyPhone"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/numberVerify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/misscallToVerify"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorVerifyPhone"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="9429466667"
+            android:textColor="@android:color/white"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/tollFree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/numberVerify"
+            android:gravity="center"
+            android:paddingTop="6dp"
+            android:text="(It's A Toll Free Number)" />
+
+        <Button
+            android:id="@+id/verify_call_button"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tollFree"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorVerifyPhone"
+            android:drawableLeft="@drawable/ic_action_call"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="6dp"
+            android:text="CALL"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/verificationStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/verify_call_button"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/verification_status"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/verification_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/verificationStatus"
+            android:gravity="center"
+            android:paddingTop="21dp"
+            android:text="PENDING"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</LinearLayout>
