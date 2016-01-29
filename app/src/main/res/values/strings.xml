@@ -28,4 +28,6 @@
     <string name="name_hint">Name</string>
     <string name="number_hint">Mobile Number</string>
     <string name="sign_up_button">Sign Up</string>
+
+    <string name="conversation">Conversation</string>
 </resources>

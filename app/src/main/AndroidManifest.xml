@@ -11,11 +11,15 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activity.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="@string/conversation"
+            android:theme="@style/AppTheme"></activity>
         <activity android:name=".activity.ShareStatusActivity" />
-        <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.SignUpActivity" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.SignUpActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.WelcomeScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

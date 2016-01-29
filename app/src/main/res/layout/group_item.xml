@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/icon_menu"
-        android:layout_marginBottom="14dp"
+       android:padding="6dp"
         android:layout_marginLeft="29dp"
         android:layout_toRightOf="@+id/icon_menu"
         android:text="TextView"
@@ -20,10 +20,19 @@
 
     <ImageView
         android:id="@+id/icon_menu"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:padding="6dp"
         android:layout_marginLeft="10dp" />
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/group_indicator"
+        android:padding="6dp"
+        android:layout_alignParentRight="true"/>
 
 </RelativeLayout>

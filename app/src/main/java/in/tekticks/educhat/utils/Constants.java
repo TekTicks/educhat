@@ -17,7 +17,7 @@ public class Constants {
     public static final String[] group_names = {"Organisations", "Settings", "Help", "About", "Log out"};
     public static final String[] sub_name = {"Contact List", "Chat", "Notification", "Connection Settings"};
     public static final String[] sub_name_text = {"Customize contact list appearance", "ABC", "Notification Settings", "Connection Settings"};
-    public static final int[] images = {R.drawable.ic_action_storage, R.drawable.ic_action_settings, R.drawable.ic_action_help, R.drawable.ic_action_about, R.drawable.ic_action_person};
+    public static final int[] images = {R.drawable.ic_account_balance_black_18dp, R.drawable.ic_settings_black_18dp, R.drawable.ic_help_black_18dp, R.drawable.ic_info_outline_black_18dp, R.drawable.ic_person_black_18dp};
 
     //API Links
     public static final String SignInLink="http://chat.educhatapp.com:9090/index.jsp";

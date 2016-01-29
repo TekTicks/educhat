@@ -1,10 +1,11 @@
 package in.tekticks.educhat.activity;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,17 +13,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.widget.ExpandableListView;
 import android.widget.PopupWindow;
-import in.tekticks.educhat.utils.Constants;
 
 import java.util.ArrayList;
 
 import in.tekticks.educhat.R;
 import in.tekticks.educhat.adapters.ExpandedListAdapter;
+import in.tekticks.educhat.adapters.ViewPagerAdapter;
 import in.tekticks.educhat.data.NavigationDrawerChildItem;
 import in.tekticks.educhat.data.NavigationDrawerGroupItem;
+import in.tekticks.educhat.fragments.ActiveChatsFragment;
+import in.tekticks.educhat.fragments.ContactsFragment;
+import in.tekticks.educhat.utils.Constants;
 
 public class MainActivity extends AppCompatActivity {
     private NavigationView mNavigationView;
@@ -31,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     private ExpandedListAdapter ExpAdapter;
     private ArrayList<NavigationDrawerGroupItem> ExpListItems;
     private ExpandableListView ExpandList;
+    private ViewPager mViewPager;
+    private TabLayout mTabLayout;
     PopupWindow verifyPhonePopupWindow;
 
     @Override
@@ -54,8 +59,14 @@ public class MainActivity extends AppCompatActivity {
                     return true;
             }
         });
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
+        mViewPager = (ViewPager) findViewById(R.id.main_page_view_pager);
+        setupViewPager(mViewPager);
+
+        mTabLayout = (TabLayout) findViewById(R.id.main_page_tabs);
+        mTabLayout.setupWithViewPager(mViewPager);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_navigation_drawer);
         setSupportActionBar(toolbar);
         toggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.app_name, R.string.app_name);
@@ -71,6 +82,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void setupViewPager(ViewPager mViewPager) {
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter.addFragment(new ActiveChatsFragment(), "Active Chats");
+        adapter.addFragment(new ContactsFragment(), "Contacts");
+        mViewPager.setAdapter(adapter);
     }
 
     @Override

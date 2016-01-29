@@ -35,7 +35,10 @@ public class ExpandedListAdapter extends BaseExpandableListAdapter {
     @Override
     public int getChildrenCount(int groupPosition) {
         ArrayList<NavigationDrawerChildItem> chList = navigationDrawerGroupItems.get(groupPosition).getItems();
-        return chList.size();
+        if (chList==null)
+            return 0;
+        else
+            return chList.size();
     }
 
     @Override
@@ -77,8 +80,16 @@ public class ExpandedListAdapter extends BaseExpandableListAdapter {
         }
         TextView tv = (TextView) convertView.findViewById(R.id.menu_name);
         ImageView iv = (ImageView) convertView.findViewById(R.id.icon_menu);
+        ImageView indicator=(ImageView) convertView.findViewById(R.id.group_indicator);
         tv.setText(navigationDrawerGroupItem.getName());
         iv.setImageResource(navigationDrawerGroupItem.getImage());
+        if (getChildrenCount(groupPosition)==0){
+                indicator.setVisibility(View.INVISIBLE);
+        }else
+        {
+            indicator.setVisibility( View.VISIBLE );
+            indicator.setImageResource( isExpanded ? R.drawable.ic_arrow_drop_up_black_18dp : R.drawable.ic_arrow_drop_down_black_18dp );
+        }
         return convertView;
     }
 
@@ -91,6 +102,7 @@ public class ExpandedListAdapter extends BaseExpandableListAdapter {
                     .getSystemService(context.LAYOUT_INFLATER_SERVICE);
             convertView = infalInflater.inflate(R.layout.child_item, null);
         }
+
         TextView child1 = (TextView) convertView.findViewById(R.id.child1);
         TextView child2 = (TextView) convertView.findViewById(R.id.child2);
         child1.setText(navigationDrawerChildItem.getChild1());

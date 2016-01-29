@@ -12,4 +12,6 @@
     <color name="frame_layout_top_registration_page">#0C6350</color>
     <color name="frame_layout_bottom_registration_page">#084f3d</color>
     <color name="separator_login_page">#000000</color>
+    <color name="chat_color">#000000</color>
+    <color name="primary_text_material_light">#ffffff</color>
 </resources>
